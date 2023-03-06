@@ -1,3 +1,6 @@
+require ('dotenv'). config ();
+const source = process.env.MONGO;
+
 import "dotenv/config";
 import Types from "./src/utils/Types.js";
 Types()
@@ -8,3 +11,5 @@ export const client = new Bot();
 
 /* Call our start function to load the bot instance */
 (async () => await client.start(process.env.TOKEN))();
+
+mongoose.connect (source, {useNewUrlParser: true});
