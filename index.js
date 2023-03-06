@@ -1,3 +1,4 @@
+require('dotenv').config();
 import "dotenv/config";
 import Types from "./src/utils/Types.js";
 Types()
